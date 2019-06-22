@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//FreeBSD//DTD DocBook XML V5.0-Based Extension//EN" "http://www.FreeBSD.org/XML/share/xml/freebsd50.dtd">
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:its="http://www.w3.org/2005/11/its" version="5.0" xml:id="leapseconds" xml:lang="nb_NO">
+
+  <info>
+    <title>FreeBSD Support vedrørende Skuddsekund</title>
+
+    <pubdate>$FreeBSD: head/en_US.ISO8859-1/articles/leap-seconds/article.xml 51243 2017-11-30 14:49:53Z ygy $</pubdate>
+  </info>
+
+  <sect1 xml:id="leapseconds-definition">
+    <title>Introduksjon</title>
+
+    <para>Et <emphasis>skuddsekund (leap second)</emphasis> er ett ekstra sekund som settes inn i tidsregningen UTC for å sikre at klokkeslettet passer til Jordens rotasjon. 
+Denne artiklen forklarer hvordan FreeBSD behandler implementering av skuddsekund.</para>
+
+    <para>Det vil ikke bli lagt til skuddsekund i slutten av Juni 2019.Forskjellen mellom Coordinated Universal Time UT  og International Atomic Time TAI er:Fra 2017 Januar 1, 0t UTC, inntil videre beskjed : UTC-TAI = -37 s</para>
+
+    <para>Skuddsekund blir annonsert via <link xlink:href="http://datacenter.iers.org/"><acronym>IERS</acronym></link> på <link xlink:href="https://www.iers.org/SharedDocs/News/EN/BulletinC.html">Bulletin C</link>.</para>
+
+    <para>Standard skuddsekund virkemåte er beskrevet i <link xlink:href="https://tools.ietf.org/html/rfc7164#section-3">RFC 7164</link>.
+Sjekk ut <citerefentry><refentrytitle>time2posix</refentrytitle><manvolnum>3</manvolnum></citerefentry> for mer informasjon.</para>
+  </sect1>
+
+  <sect1 xml:id="leapseconds-posix">
+    <title>Standard Skuddsekund og dens virkemåte i FreeBSD</title>
+
+    <para>Den enkleste måten å behandle skuddsekund på er med <acronym>POSIX</acronym> tids regler. FreeBSD bruker det sammen med <link xlink:href="@@URL_RELPREFIX@@/doc/en_US.ISO8859-1/books/handbook/network-ntp.html"><acronym>NTP</acronym></link> som en standard.
+Når <citerefentry><refentrytitle>ntpd</refentrytitle><manvolnum>8</manvolnum></citerefentry> kjører og tiden er sykronisert med motstrøms<acronym>NTP</acronym> som behandler skuddsekund korrekt så vil systemet automatisk repetere det siste sekundet på slutten av dagen. 
+Ingen andre justeringer er nødvendig.</para>
+
+    <para>Hvis motstrøms NTP servere ikke behandler skuddsekund korrekt, så vil <citerefentry><refentrytitle>ntpd</refentrytitle><manvolnum>8</manvolnum></citerefentry> justere tiden ett sekund etter den feilende serveren har lagt merke til dette og justerer selv.</para>
+
+    <para>Hvis <acronym>NTP</acronym> ikke er i bruk så er det behov for manuell justering etter at skuddsekundet har passert.</para>
+  </sect1>
+
+  <sect1 xml:id="leapseconds-cautions">
+    <title>Advarsel</title>
+
+    <para>Skuddsekund blir implementert på samme tid over hele verden.<acronym>UTC</acronym> midnatt. I Japan så er det litt utpå morgenkvisten, i Stillehavet midt på dagen, Amerika sent på ettermiddagen og i Europa på natters tid.</para>
+
+    <para>Vi tror og forventer at dersom FreeBSD leverer en korrekt og stabil <acronym>NTP</acronym> tjeneste, så vil alt fungere som det skal når skuddsekund skjer. Slik som det alltid har gjort tidligere.</para>
+
+    <para>Men vi har lagt merke til at det er fryktelig sjeldent eller aldri at programmer spør kernel om skuddsekund. Vår erfaring er at som utviklet så er skuddsekund  en reprise av sekundet før skuddsekundet og dette kommer ofte som en overraskelse på programutviklere.</para>
+
+    <para>Andre operativ system og andre datamaskiner vil eller ikke behandle skuddsekund på samme måte som FreeBSD gjør.
+Et system uten korrekt og stabil <acronym>NTP</acronym> tjeneste vil ikke kjenne til begrepet skuddsekund i det hele tatt.</para>
+
+    <para>Det er ikke uvanlig at datamaskiner kan kræsje eller få nedetid på grunn av skuddsekund, erfaring tilsier at en stor andel av <acronym>NTP</acronym> servere kan behandle skuddsekund feil.</para>
+
+    <para>Vær så snill og prøv å se til at ingenting problematisk skjer på grunn av skuddsekund.</para>
+  </sect1>
+
+  <sect1 xml:id="leapseconds-testing">
+    <title>Testing</title>
+
+    <para>Det er mulig å teste om skuddsekund vill bli brukt. På grunn av hvordan <acronym>NTP</acronym> fungerer så kan en slik test ofte bruke opptil 24 timer før skuddsekund skjer. Noen store klokke kilder annonserer kun skuddsekund en time før det faktisk skjer. 
+
+Send en forespørsel i output til <acronym>NTP</acronym> daemon:</para>
+
+    <screen><prompt>%</prompt> <userinput>ntpq -c 'rv 0 leap'</userinput></screen>
+
+    <para>Output som inkluderer <literal>leap_add_sec</literal> indikerer riktig support for skuddsekund. Før det har gått 24 timer opptil skuddsekund eller etter skuddsekundet har skjedd så vil <literal>leap_none</literal> bli vist.</para>
+  </sect1>
+
+  <sect1 xml:id="leapseconds-conclusion">
+    <title>Konklusjon</title>
+
+    <para>Sånn praktisk sett så er ikke skuddsekund kjent som et problem i FreeBSD. Vi håper at denne oversikten vil gi deg en oversikt på hva du kan forvente og hvordan du kan gjennomføre dette mest mulig smertefritt.</para>
+  </sect1>
+</article>

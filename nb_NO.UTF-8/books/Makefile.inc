@@ -1,5 +1,5 @@
 #
-# $FreeBSD: head/en_US.ISO8859-1/books/Makefile.inc 39534 2012-09-14 12:11:19Z gabor $
+# $FreeBSD$
 #
 
-DESTDIR?=	${DOCDIR}/en_US.ISO8859-1/books/${.CURDIR:T}
+DESTDIR?=	${DOCDIR}/nb_NO.UTF-8/books/${.CURDIR:T}

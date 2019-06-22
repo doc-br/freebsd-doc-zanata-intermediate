@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//FreeBSD//DTD DocBook XML V5.0-Based Extension//EN" "http://www.FreeBSD.org/XML/share/xml/freebsd50.dtd">
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:its="http://www.w3.org/2005/11/its" version="5.0" xml:lang="nb_NO">
+  <info>
+    <title>Port Mentor Retningslinjer</title>
+
+    <authorgroup>
+      <author><orgname>The FreeBSD Ports Management Team</orgname></author>
+    </authorgroup>
+
+    <pubdate>$FreeBSD: head/en_US.ISO8859-1/articles/port-mentor-guidelines/article.xml 51348 2017-12-30 22:56:56Z eadler $</pubdate>
+
+    <releaseinfo>$FreeBSD: head/en_US.ISO8859-1/articles/port-mentor-guidelines/article.xml 51348 2017-12-30 22:56:56Z eadler $</releaseinfo>
+
+    <copyright><year>2011</year> <holder role="mailto:tabthorpe@FreeBSD.org">Thomas Abthorpe</holder> <holder role="mailto:crees@FreeBSD.org">Chris Rees</holder></copyright>
+  </info>
+
+  <sect1 xml:id="port-mentor.guidelines">
+    <title>Retningslinje for Mentor / Mentee Relasjoner</title>
+
+    <para>Denne delen skal hjelpe demystifisere veiledningsprosessen, samt en måte å åpenlyst fremme en konstruktiv diskusjon for å tilpasse og utvide retningslinjene. I våres liv har vi for mange regler; Vi er ikke en regjeringsorganisasjon som påvirker regelverk, men heller et kollektiv av likesinnede personer som arbeider mot et felles mål, og opprettholder kvalitetssikringen av produktet vi kaller Ports Tree.</para>
+
+    <sect2 xml:id="why.mentor">
+      <title>Hvorfor akkurat Mentor?</title>
+
+      <itemizedlist>
+	<listitem>
+	  <para>For de fleste av oss ble vi mentorisert inn i FreeBSD prosjektet, så returner tjenesten ved å tilby å veilede noen andre inn.</para>
+	</listitem>
+
+	<listitem>
+	  <para>Du har en uimotståelig trang til å dele kunnskap med andre.</para>
+	</listitem>
+
+	<listitem>
+	  <para>Den vanlige straffen gjelder fordi du er syk og lei av å begå andres gode arbeid!</para>
+	</listitem>
+      </itemizedlist>
+    </sect2>
+
+    <sect2 xml:id="mentor.comentor">
+      <title>Mentor/Co-Mentor</title>
+
+      <para>Grunn for et samarbeids mentorskap:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para>Signifikante tidssone forskjeller. Tilgjengelige, interaktive mentor(er) tilgjengelig via IM er ekstremt nyttig!</para>
+	</listitem>
+
+	<listitem>
+	  <para>Potensiell språkbarriere. Ja, FreeBSD er veldig engelsk orientert, også programvareutvikling, men å ha en mentor som kan snakke et morsmål kan være svært nyttig.</para>
+	</listitem>
+
+	<listitem>
+	  <para>Inntil det er en 30-timers dag og en 8-dagers uke, har noen av oss bare så mye tid til å gi. Å dele denne belastningen med noen andre vil gjøre det enklere for alle.</para>
+	</listitem>
+
+	<listitem>
+	  <para>En nybegynner mentor kan dra nytte av opplevelser/erfaringer av en senior committer/mentor.</para>
+	</listitem>
+
+	<listitem>
+	  <para>To hoder tenker bedre enn et.</para>
+	</listitem>
+      </itemizedlist>
+
+      <para>Grunner for solo mentorskap:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para>Du klarer ikke oppføre deg bra mot andre eller samarbeide med andre.</para>
+	</listitem>
+
+	<listitem>
+	  <para>Du foretrekker å ha et en-mot-en forhold/relasjon.</para>
+	</listitem>
+
+	<listitem>
+	  <para>Årsakene til co-mentorskap gjelder ikke for deg.</para>
+	</listitem>
+      </itemizedlist>
+    </sect2>
+
+    <sect2 xml:id="mentor.expectations">
+      <title>Forventninger</title>
+
+      <para>Vi forventer at veiledere vurderer og testbygger alle foreslåtte oppdateringer, i hvert fall for en innledende periode som varer mer enn en uke eller to.</para>
+
+      <para>Vi forventer at mentorer skal ta ansvar for handlinger fra deres mentee. En mentor bør følge opp med alle forpliktelser som menteer gjør, både godkjent og implisitt.</para>
+
+      <para>Vi forventer mentorer for å sikre at deres mentees leser <link xlink:href="@@URL_RELPREFIX@@/doc/en_US.ISO8859-1/books/porters-handbook">Porter's Handbook</link>, <link xlink:href="@@URL_RELPREFIX@@/doc/en_US.ISO8859-1/articles/pr-guidelines">PR handling guide</link>, og <link xlink:href="@@URL_RELPREFIX@@/doc/en_US.ISO8859-1/articles/committers-guide">Committer's Guide</link>. Selv om det ikke er nødvendig å huske alle detaljer, må alle kommittere ha en oversikt over disse tingene som en effektiv del av samfunnet (og unngå så mange rookie feil som overhode mulig).</para>
+    </sect2>
+
+    <sect2 xml:id="mentees">
+      <title>Velge en Mentee</title>
+
+      <para>Det er ingen definert regel for hva som gjør en kandidat klar; det kan være en kombinasjon av antall PR som de har sendt inn, antall porter opprettholdt, oppdatering av porter, og/eller deltakelse i et bestemt område som <application>GNOME</application>, <application>KDE</application>,<application>Gecko</application> eller andre.</para>
+
+      <para>En kandidat bør ha nesten ikke ha timeouts, bør være responsiv på forespørsler  og generelt nyttig for å støtte sine port utgivelser.</para>
+
+      <para>Det må være en historie med engasjement, da det er allment forstått at det å lære opp en kommitter krever tid og krefter. Hvis noen har holdt på lenger, og brukt tiden på å observere hvordan ting er gjort, er det en viss forventning om akkumulert kunnskap. Altfor ofte har vi sett en maintainer sende inn noen PR, for å så derette dukke opp i IRC og spør når de skal få en forpliktelsebit.</para>
+
+      <para>Å abonnere på, og følge adresselister er veldig gunstig. Det er ingen reell forventning om at innlevering av innlegg på listene vil gjøre noen til en kommitter, men det viser en viss forpliktelse. Noen eposter gir innsikt i kunnskapen en kandidat innehaver i tillegg til hvordan de samhandler med andre. Tilsvarende deltagelse i IRC kan gi noen en høyere profil og kan gjøre at man lettere blir lagt merke til.</para>
+
+      <para>Spør seks forskjellige kommitterer hvor mange PR som en vedlikeholder skal sende før de blir nominert, og du vil garantert få seks forskjellige svar. Spør de samme personene hvor lenge noen burde ha deltatt, og du vil få samme dilemma. Hvor mange porter skal de ha på et minimum? samme dilemma der og. Noen ting er bare vanskelig å kvantifisere, en mentor må bare bruke sin beste dømmekraft, og håpe at portmgr er enig.</para>
+
+    </sect2>
+    <sect2 xml:id="mentorship.duration">
+      <title>Mentorskapets varighet</title>
+
+      <para>Etter hvert som tillitsnivået utvikler seg og vokser, kan en mentee bli gitt <quote>implisitt</quote> commit rettigheter. Dette kan inneholde trivielle endringer i et <filename>Makefile</filename>, <filename>pkg-descr</filename> etc. På samme måte kan det inneholde <varname>PORTVERSION</varname> oppdateringer som ikke inkluderer <varname>plist</varname> endringer. Andre omstendigheter kan formuleres etter Mentorens oppførsel og vurdering. I løpet av perioden med mentorskap, bør en portversjons bump som påvirker avhengige porter, kontrolleres av en mentor.</para>
+
+      <para>Akkurat som vi er alle forskjellige individer, har hver mentee forskjellige læringskurver, tidsforpliktelser og andre påvirkningsfaktorer som vil bidra til tiden som kreves før de kan <quote>jobbe solo</quote>. Empirisk bør en mentee observeres i minst 3 måneder. 90-100 commits er et annet mål som en mentor kan bruke før du frigjør en mentee. Andre faktorer for å vurdere tidligere utgivelse av en mentee er antall feil de måtte ha gjort, QATs mottatt etc. Hvis de fortsatt gjør nybegynnerfeil, krever de fortsatt mentorveiledning.</para>
+    </sect2>
+
+    <sect2 xml:id="mentor.comentor.debate">
+      <title>Mentor/Co-Mentor Debatt</title>
+
+      <para>Når en forespørsel kommer til portmgr, leses den vanligvis som, <quote> Jeg foreslår 'foo' for en portforbindelse, jeg vil være co-mentor med 'bar' </quote>. Forslag mottatt, stemt og tatt videre.</para>
+
+      <para>Mentoren er det primære kontaktpunktet eller <quote>først blant likeverdige</quote>, co-mentoren er backupen.</para>
+
+      <para>Noen klandrede, hvis navn skal holdes tilbake, gjorde <link xlink:href="https://lists.freebsd.org/pipermail/cvs-ports/2007-September/134614.html">første registrerte co-mentor commit</link>. Lignende co-mentorforbindelser har også blitt oppdaget i src-treet. Gjøres dette det riktig? Gjøres dette feil? Det ser ut til å være en del av utviklingen av hvordan ting gjøres.</para>
+    </sect2>
+
+    <sect2 xml:id="mentee.expectations">
+      <title>Forventninger</title>
+
+      <para>Vi forventer at mentees skal være forberedt på konstruktiv kritikk fra samfunnet. Det er fortsatt mye <quote>kjennskap</quote> som ikke er direkteskrevet ned. Å svare godt på konstruktiv kritikk er det vi håper vi velger etter ved å først gjennomgå deres eksisterende bidrag på IRC og postlister.</para>
+
+      <para>Vi advarer mentees om at noe av kritikken de mottar, kan være mindre <quote>konstruktiv</quote> enn andre (enten gjennom språkkommunikasjonsproblemer eller overdreven flisespikking), og at det å håndtere dette grasiøst bare er en del av å være i et stort samfunn. I tilfelle det er konkrete problemer med bestemte personer eller spørsmål, håper vi at de vil nærme seg et portmgr-medlem på IRC eller via e-post.</para>
+    </sect2>
+  </sect1>
+</article>

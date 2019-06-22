@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE book PUBLIC "-//FreeBSD//DTD DocBook XML V5.0-Based Extension//EN"
-	"http://www.FreeBSD.org/XML/share/xml/freebsd50.dtd" [
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book PUBLIC "-//FreeBSD//DTD DocBook XML V5.0-Based Extension//EN" "http://www.FreeBSD.org/XML/share/xml/freebsd50.dtd" [
 <!ENTITY % chapters SYSTEM "chapters.ent">
-%chapters;
-]>
+<!-- $FreeBSD: head/en_US.ISO8859-1/books/dev-model/chapters.ent 39631 2012-10-01 09:53:01Z gabor $ --><!--!ENTITY chap.references	SYSTEM "references.xml"-->]>
 <!--
   - Copyright (c) 2002-2005 Niklas Saers
   - All rights reserved.
@@ -31,78 +29,78 @@
   -
   - $FreeBSD: head/en_US.ISO8859-1/books/dev-model/book.xml 51969 2018-07-05 20:36:13Z jrm $
   -->
-<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
-     <info><title>A project model for the FreeBSD Project</title>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:its="http://www.w3.org/2005/11/its" version="5.0" xml:lang="nb_NO">
+     <info><title xml:lang="en">A project model for the FreeBSD Project</title>
         
-        <author><personname><firstname>Niklas</firstname><surname>Saers</surname></personname></author>
-        <copyright>
+        <author xml:lang="en"><personname><firstname>Niklas</firstname><surname>Saers</surname></personname></author>
+        <copyright xml:lang="en">
             <year>2002-2005</year>
             <holder>Niklas Saers</holder>
         </copyright>
 	<revhistory>
-	  <revision>
+	  <revision xml:lang="en">
 	    <revnumber>1.5</revnumber>
 	    <date>October, 2014</date>
 	    <revremark>Remove mention of GNATS which is no longer
 	      used by the project.</revremark>
 	  </revision>
-	  <revision>
+	  <revision xml:lang="en">
 	    <revnumber>1.4</revnumber>
 	    <date>September, 2013</date>
 	    <revremark>Remove mention of CVS and CVSup which are no
 	      longer used by the project.</revremark>
 	  </revision>
-	  <revision>
+	  <revision xml:lang="en">
 	      <revnumber>1.3</revnumber>
 	      <date>October, 2012</date>
 	      <revremark>Remove hats held by specific people, these
 		are documented elsewhere.</revremark>
 	    </revision>
-            <revision>
+            <revision xml:lang="en">
                 <revnumber>1.2</revnumber>
                 <date>April, 2005</date>
                 <revremark>Update one year of changes, replace statistics with those of 2004</revremark>
             </revision>
-            <revision>
+            <revision xml:lang="en">
                 <revnumber>1.1</revnumber>
                 <date>July, 2004</date>
                 <revremark>First update within the FreeBSD tree</revremark>
             </revision>
-            <revision>
+            <revision xml:lang="en">
                 <revnumber>1.0</revnumber>
                 <date>December 4th, 2003</date>
                 <revremark>Ready for commit to FreeBSD Documentation</revremark>
             </revision>
-            <revision>
+            <revision xml:lang="en">
                 <revnumber>0.7</revnumber>
                 <date>April 7th, 2003</date>
                 <revremark>Release for review by the Documentation team</revremark>
             </revision>
-            <revision>
+            <revision xml:lang="en">
                 <revnumber>0.6</revnumber>
                 <date>March 1st, 2003</date>
                 <revremark>Incorporated corrections noted by
                 interviewees and reviewers</revremark>
             </revision>
-            <revision>
+            <revision xml:lang="en">
                 <revnumber>0.5</revnumber>
                 <date>February 1st, 2003</date>
                 <revremark>Initial review by interviewees</revremark>
             </revision>
         </revhistory>
 
-	<releaseinfo>$FreeBSD: head/en_US.ISO8859-1/books/dev-model/book.xml 51969 2018-07-05 20:36:13Z jrm $</releaseinfo>
+	<releaseinfo xml:lang="en">$FreeBSD: head/en_US.ISO8859-1/books/dev-model/book.xml 51969 2018-07-05 20:36:13Z jrm $</releaseinfo>
     </info>
     <preface xml:id="foreword">
 
-        <title>Foreword</title>
-        <para>
+        <title xml:lang="en">Foreword</title>
+        <para xml:lang="en">
             Up until now, the FreeBSD project has released a number of
             described techniques to do different parts of work. However,
             a project model summarising how the project is structured is needed
             because of the increasing amount of project members.
             <footnote>
-                <para>
+                <para xml:lang="en">
                     This goes hand-in-hand with Brooks' law that <quote>adding
                     another person to a late project will make it later</quote>
                     since it will increase the communication needs <xref linkend="brooks"/>.
@@ -117,35 +115,35 @@
             the project works. It is based on <citation><xref linkend="thesis"/></citation>.
         </para>
 
-        <para>
+        <para xml:lang="en">
             I would like to thank the following people for taking the time
             to explain things that were unclear to me and for proofreading
             the document.</para>
             <itemizedlist>
-                <listitem><para>Andrey A. Chernov <email>ache@freebsd.org</email></para></listitem>
-                <listitem><para>Bruce A. Mah <email>bmah@freebsd.org</email></para></listitem>
-                <listitem><para>Dag-Erling Sm&oslash;rgrav <email>des@freebsd.org</email></para></listitem>
-                <listitem><para>Giorgos Keramidas<email>keramida@freebsd.org</email></para></listitem>
-                <listitem><para>Ingvil Hovig <email>ingvil.hovig@skatteetaten.no</email></para></listitem>
-                <listitem><para>Jesper Holck<email>jeh.inf@cbs.dk</email></para></listitem>
-                <listitem><para>John Baldwin <email>jhb@freebsd.org</email></para></listitem>
-                <listitem><para>John Polstra <email>jdp@freebsd.org</email></para></listitem>
-                <listitem><para>Kirk McKusick <email>mckusick@freebsd.org</email></para></listitem>
-                <listitem><para>Mark Linimon <email>linimon@freebsd.org</email></para></listitem>
-                <listitem><para>Marleen Devos</para></listitem>
-                <listitem><para>Niels J&oslash;rgenssen<email>nielsj@ruc.dk</email></para></listitem>
-                <listitem><para>Nik Clayton <email>nik@freebsd.org</email></para></listitem>
-                <listitem><para>Poul-Henning Kamp <email>phk@freebsd.org</email></para></listitem>
-                <listitem><para>Simon L. Nielsen <email>simon@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">Andrey A. Chernov <email>ache@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">Bruce A. Mah <email>bmah@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">Dag-Erling Smørgrav <email>des@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">Giorgos Keramidas<email>keramida@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">Ingvil Hovig <email>ingvil.hovig@skatteetaten.no</email></para></listitem>
+                <listitem><para xml:lang="en">Jesper Holck<email>jeh.inf@cbs.dk</email></para></listitem>
+                <listitem><para xml:lang="en">John Baldwin <email>jhb@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">John Polstra <email>jdp@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">Kirk McKusick <email>mckusick@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">Mark Linimon <email>linimon@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">Marleen Devos</para></listitem>
+                <listitem><para xml:lang="en">Niels Jørgenssen<email>nielsj@ruc.dk</email></para></listitem>
+                <listitem><para xml:lang="en">Nik Clayton <email>nik@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">Poul-Henning Kamp <email>phk@freebsd.org</email></para></listitem>
+                <listitem><para xml:lang="en">Simon L. Nielsen <email>simon@freebsd.org</email></para></listitem>
             </itemizedlist>
 
     </preface>
 
     <chapter xml:id="overview">
-        <title>Overview</title>
+        <title xml:lang="en">Overview</title>
 
 
-        <para>
+        <para xml:lang="en">
             A project model is a means to reduce the communications overhead in
             a project. As shown by <citation><xref linkend="brooks"/></citation>, increasing the
             number of project participants increases the communication in the
@@ -156,7 +154,7 @@
             description of the project.
         </para>
 
-        <para>
+        <para xml:lang="en">
             During the Core elections in 2002, Mark Murray stated
             <quote>I am opposed to a long rule-book, as that satisfies
 	           lawyer-tendencies, and is counter to the technocentricity that
@@ -174,16 +172,16 @@
 
         </para>
 
-        <para>
+        <para xml:lang="en">
             The FreeBSD project model will be described as of
-            July 1st, 2004. It is based on the Niels J&oslash;rgensen's paper
+            July 1st, 2004. It is based on the Niels Jørgensen's paper
             <citation><xref linkend="jorgensen2001"/></citation>,
             FreeBSD's official documents,
             discussions on FreeBSD mailing lists and interviews with
             developers.
         </para>
 
-        <para>
+        <para xml:lang="en">
             After providing definitions of terms used, this document will outline
             the organisational structure (including role descriptions and
             communication lines),
@@ -193,7 +191,7 @@
             FreeBSD project.
         </para>
 
-        <para>
+        <para xml:lang="en">
             <citation><xref linkend="freebsd-developer-handbook"/>, Section 1.2 and 1.3</citation>
             give the vision and the architectural guidelines for the
             project. The vision is <quote>To produce the best UNIX-like
@@ -206,12 +204,12 @@
 </chapter>
 
         <chapter xml:id="definitions">
-            <title>Definitions</title>
+            <title xml:lang="en">Definitions</title>
 
             <section xml:id="ref-activity" xreflabel="">
-                <title>Activity</title>
+                <title xml:lang="en">Activity</title>
 
-                <para>
+                <para xml:lang="en">
                     An <quote>activity</quote> is an element of work performed
                     during the course of a project <citation><xref linkend="ref-pmbok"/></citation>.
                     It has an output and
@@ -224,9 +222,9 @@
             </section>
 
             <section xml:id="def-process" xreflabel="">
-                <title>Process</title>
+                <title xml:lang="en">Process</title>
 
-                <para>
+                <para xml:lang="en">
                     A <quote>process</quote> is a series of activities
                     that lead towards a particular outcome. A process can
                     consist of one or more sub-processes. An example of a process is software
@@ -236,9 +234,9 @@
             </section>
 
             <section xml:id="ref-hat" xreflabel="Hat">
-                <title>Hat</title>
+                <title xml:lang="en">Hat</title>
 
-                <para>
+                <para xml:lang="en">
                     A <quote>hat</quote> is synonymous with role. A hat has
                     certain responsibilities in a process and for the process
                     outcome. The hat executes activities. It is well defined what
@@ -249,9 +247,9 @@
             </section>
 
             <section xml:id="ref-outcome" xreflabel="Outcome">
-                <title>Outcome</title>
+                <title xml:lang="en">Outcome</title>
 
-                <para>
+                <para xml:lang="en">
                     An <quote>outcome</quote> is the final output of the process.
                     This is synonymous with deliverable, that is defined as
                     <quote>any measurable, tangible, verifiable outcome, result or
@@ -268,9 +266,9 @@
 
 
             <section xml:id="ref-freebsd" xreflabel="">
-                <title>FreeBSD</title>
+                <title xml:lang="en">FreeBSD</title>
 
-                <para>
+                <para xml:lang="en">
                     When saying <quote>FreeBSD</quote> we will mean the BSD
                     derivative UNIX-like operating system
                     FreeBSD, whereas when saying <quote>the FreeBSD
@@ -280,9 +278,9 @@
         </chapter>
 
         <chapter xml:id="model-orgstruct">
-            <title>Organisational structure</title>
+            <title xml:lang="en">Organisational structure</title>
 
-            <para>
+            <para xml:lang="en">
                 While no-one takes ownership of FreeBSD, the FreeBSD
                 organisation is divided into core, committers and contributors
                 and is part of the FreeBSD community that lives around it.
@@ -290,19 +288,19 @@
             </para>
             <para>
                 <figure>
-                    <title>The FreeBSD Project's structure</title>
+                    <title xml:lang="en">The FreeBSD Project's structure</title>
                     <mediaobject><imageobject><imagedata fileref="orghierarchy"/></imageobject></mediaobject>
                 </figure>
             </para>
 
-            <para>
+            <para xml:lang="en">
                 Number of committers has been determined by going through
                 CVS logs from January 1st, 2004 to December 31st, 2004 and
                 contributors by going through the list of contributions and
                 problem reports.
             </para>
 
-            <para>
+            <para xml:lang="en">
                 The main resource in the FreeBSD community is its developers: the
                 committers and contributors. It is with their contributions that the
                 project can move forward. Regular developers are referred to as contributors.
@@ -315,7 +313,7 @@
 
             </para>
 
-            <para>
+            <para xml:lang="en">
                 Committers are developers with the privilege of being able to
                 commit changes. These are usually the
                 most active developers who are willing to
@@ -325,7 +323,7 @@
                 the core team, and they have access to closed discussions.
             </para>
 
-            <para>
+            <para xml:lang="en">
 	        <!-- 96 developers commit in one part only,
 		     91 developers commit in two parts,
 		     48 developers commit in three parts,
@@ -343,16 +341,16 @@
                 kernel and userland is meant.
             </para>
 
-            <para>
+            <para xml:lang="en">
                 This split changes our triangle to look like this:
             </para>
             <para>
                 <figure>
-                    <title>The FreeBSD Project's structure with committers in categories</title>
+                    <title xml:lang="en">The FreeBSD Project's structure with committers in categories</title>
                     <mediaobject><imageobject><imagedata fileref="orghierarchy2"/></imageobject></mediaobject>
                 </figure>
             </para>
-            <para>
+            <para xml:lang="en">
                 Number of committers per area has been determined by going through
                 CVS logs from January 1st, 2004 to December 31st, 2004.
                 Note that many committers work in multiple
@@ -361,7 +359,7 @@
                 time was 269. <!-- Down from 275 in 2001 -->
             </para>
 
-            <para>
+            <para xml:lang="en">
                 Committers fall into three
                 groups: committers who are only concerned with one area of
                 the project (for instance file systems), committers who
@@ -373,7 +371,7 @@
                 in the above triangle.
             </para>
 
-            <para>
+            <para xml:lang="en">
                 The kernel is the main building block of FreeBSD. While
                 the userland applications are protected against faults in
                 other userland applications, the entire system is
@@ -385,7 +383,7 @@
                 requires a closer coordination than userland applications do.
             </para>
 
-            <para>
+            <para xml:lang="en">
                 The core utilities, known as userland, provide the interface that identifies
                 FreeBSD, both user interface, shared libraries and external interfaces to
                 connecting clients. Currently, 162 people are involved in userland
@@ -395,14 +393,14 @@
                 be discussed in the <xref linkend="role-maintainer"/> section.
             </para>
 
-            <para>
+            <para xml:lang="en">
                 Documentation is handled by <xref linkend="sub-project-documentation"/>
                 and includes all documents surrounding the
                 FreeBSD project, including the web pages. There were during 2004 101
 		people making commits to the FreeBSD Documentation Project.
             </para>
 
-            <para>
+            <para xml:lang="en">
                 Ports is the collection of meta-data that is needed to make
                 software packages build correctly on FreeBSD. An example of a port
                 is the port for the web-browser Mozilla. It contains
@@ -412,7 +410,7 @@
                 install the package. As of this writing, there are more than
                 12600 ports available.
                 <footnote>
-                    <para>
+                    <para xml:lang="en">
                         Statistics are generated by counting the number of
                         entries in the file fetched by portsdb by April 1st, 2005.
 			portsdb is a part of the port sysutils/portupgrade.
@@ -430,31 +428,31 @@
         </chapter>
 
         <chapter xml:id="methodology-model">
-            <title>Methodology model</title>
+            <title xml:lang="en">Methodology model</title>
 
-            <section xml:id="development-model"><title>Development model</title>
+            <section xml:id="development-model"><title xml:lang="en">Development model</title>
 
-                <para>
+                <para xml:lang="en">
                     There is no defined model for how people write code in
-                    FreeBSD. However, Niels J&oslash;rgenssen has suggested a model of
+                    FreeBSD. However, Niels Jørgenssen has suggested a model of
                     how written code is integrated into the project.
                 </para>
 
                 <para>
                     <figure>
-                        <title>J&oslash;rgenssen's model for change integration</title>
+                        <title xml:lang="en">Jørgenssen's model for change integration</title>
                         <mediaobject><imageobject><imagedata fileref="maintenance"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The <quote>development release</quote> is the FreeBSD-CURRENT
                     ("-CURRENT") branch and the <quote>production release</quote>
                     is the FreeBSD-STABLE branch ("-STABLE")
                     <citation><xref linkend="jorgensen2001"/></citation>.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     This is a model for one change, and shows that after
                     coding, developers seek community review and
                     try integrating it with their own systems. After integrating the change
@@ -467,8 +465,8 @@
                     change with either -CURRENT or -STABLE is called making a commit.
                 </para>
 
-                <para>
-                    J&oslash;rgensen found that most FreeBSD developers work
+                <para xml:lang="en">
+                    Jørgensen found that most FreeBSD developers work
                     individually, meaning that this model is used in parallel by
                     many developers on the different ongoing development efforts. A
                     developer can also be working on multiple changes, so that while
@@ -476,12 +474,12 @@
                     changes, he may be writing another change.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     As each commit represents an increment, this is a massively
                     incremental model. The commits are in fact so frequent that
                     during one year
                     <footnote>
-                        <para>
+                        <para xml:lang="en">
                             The period from January 1st, 2004 to December 31st, 2004 was
                             examined to find this number.
                         </para>
@@ -490,8 +488,8 @@
                     commits.
                 </para>
 
-                <para>
-                    Within the <quote>code</quote> bracket in J&oslash;rgensen's
+                <para xml:lang="en">
+                    Within the <quote>code</quote> bracket in Jørgensen's
                     figure, each programmer has his own working style and follows his
                     own development models. The bracket could very well have been
                     called <quote>development</quote> as it includes requirements
@@ -501,7 +499,7 @@
                 </para>
 
 
-                <para>
+                <para xml:lang="en">
                     From a stepwise model's perspective (such as the waterfall
                     model), the other brackets can be seen as further verification
                     and system integration. This system integration is also important
@@ -514,26 +512,26 @@
                     days. Such a merge is referred to as an MFC (Merge From Current).
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     It is important to notice the word <quote>change</quote>. Most
                     commits do not contain radical new features, but are maintenance
                     updates.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The only exceptions from this model are security fixes and
                     changes to features that are deprecated in the -CURRENT branch.
                     In these cases, changes can be committed directly to the -STABLE branch.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     In addition to many people working on the project, there are
                     many related projects to the FreeBSD Project. These are either
                     projects developing brand new features,
                     sub-projects or projects whose outcome is incorporated into
                     FreeBSD
                     <footnote>
-                        <para>
+                        <para xml:lang="en">
                             For instance, the development of the Bluetooth stack started
                             as a sub-project until it was deemed stable enough to be
                             merged into the -CURRENT branch. Now it is a part of the core
@@ -547,12 +545,12 @@
                     branches or commit directly to both -CURRENT and -STABLE.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     There is no standards to how design should be done, nor is
                     design collected in a centralised repository.
                     The main design is that of 4.4BSD.
                     <footnote>
-                        <para>
+                        <para xml:lang="en">
                             According to Kirk McKusick, after 20 years of developing
                             UNIX operating systems, the interfaces are for the most part
                             figured out. There is therefore no need for much
@@ -566,7 +564,7 @@
                     </footnote>
 
                     As design is a part of the <quote>Code</quote> bracket in
-                    J&oslash;rgenssen's model, it is up to every developer or
+                    Jørgenssen's model, it is up to every developer or
                     sub-project how this should be done.
 
 
@@ -581,16 +579,16 @@
             </section>
 
             <section xml:id="release-branches">
-                <title>Release branches</title>
+                <title xml:lang="en">Release branches</title>
 
-                <para>
+                <para xml:lang="en">
                     The releases of FreeBSD is best illustrated by a tree with many
                     branches where each major branch represents a major
                     version. Minor versions are represented by branches of the
                     major branches.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     In the following release tree, arrows that follow one-another
                     in a particular direction
                     represent a branch. Boxes with full lines and diamonds represent official
@@ -607,11 +605,11 @@
 
                 <para>
                     <figure>
-                        <title>The FreeBSD release tree</title>
+                        <title xml:lang="en">The FreeBSD release tree</title>
                         <mediaobject><imageobject><imagedata fileref="branches"/></imageobject></mediaobject>
                     </figure>
                 </para>
-                <para>
+                <para xml:lang="en">
                     The latest -CURRENT version
                     is always referred to as -CURRENT, while the latest -STABLE
                     release is always referred to as -STABLE. In this figure,
@@ -620,7 +618,7 @@
                     <citation><xref linkend="freebsd-releng"/></citation>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     A <quote>major release</quote> is always made from the -CURRENT branch.
                     However, the -CURRENT branch does not need to fork at that point in time,
                     but can focus on stabilising. An example of this is that following
@@ -634,14 +632,14 @@
                     5-STABLE is forked that the development branch will be branded 6.0-CURRENT.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     A <quote>minor release</quote> is made from the -CURRENT branch
                     following a major release, or from the -STABLE branch.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Following and including, 4.3-RELEASE<footnote>
-                        <para>
+                        <para xml:lang="en">
                             The first release this actually happened for was 4.5-RELEASE,
                             but security branches were at the same time created for
                             4.3-RELEASE and 4.4-RELEASE.
@@ -652,7 +650,7 @@
                     offers, but instead require an absolutely stable environment, only
                     updating to implement security updates.
                     <footnote>
-                        <para>
+                        <para xml:lang="en">
                             There is a terminology
                             overlap with respect to the word "stable", which leads to some
                             confusion. The -STABLE branch is still a
@@ -665,7 +663,7 @@
                     </footnote>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Each update to a security branch
                     is called a <quote>patchlevel</quote>. For every security
                     enhancement that is done, the patchlevel number is increased,
@@ -679,26 +677,26 @@
             </section>
 
             <section xml:id="model-summary">
-                <title>Model summary</title>
+                <title xml:lang="en">Model summary</title>
 
-                <para>
+                <para xml:lang="en">
                     To summarise, the development model of FreeBSD can be seen as
                     the following tree:
                 </para>
 
                 <para>
                     <figure>
-                        <title>The overall development model</title>
+                        <title xml:lang="en">The overall development model</title>
                         <mediaobject><imageobject><imagedata fileref="freebsd-code-model"/></imageobject></mediaobject>
                     </figure>
                 </para>
-                <para>
+                <para xml:lang="en">
                     The tree of the FreeBSD development with ongoing development
                     efforts and continuous integration.
                 </para>
 
 
-                <para>
+                <para xml:lang="en">
                     The tree symbolises the release versions with major versions
                     spawning new main branches and minor versions being versions of
                     the main branch. The top branch is the -CURRENT branch where all
@@ -706,7 +704,7 @@
                     branch directly below it.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Clouds of development efforts hang over the project
                     where developers use the development models they see fit. The
                     product of their work is then integrated into -CURRENT where it
@@ -719,9 +717,9 @@
         </chapter>
 
         <chapter xml:id="sect-hats">
-            <title>Hats</title>
+            <title xml:lang="en">Hats</title>
 
-            <para>
+            <para xml:lang="en">
                 Many committers have a special area of responsibility. These
                 roles are called hats.
                 These hats can
@@ -734,7 +732,7 @@
                 the role held by a group.
             </para>
 
-            <para>
+            <para xml:lang="en">
                 Many of these hats are not formalised. Formalised hats have a
                 charter stating the exact purpose of the hat along with its
                 privileges and responsibilities. The writing of such charters is
@@ -747,11 +745,11 @@
 
 
             <section xml:id="general-hats">
-                <title>General Hats</title>
+                <title xml:lang="en">General Hats</title>
 
                 <section xml:id="role-contributor" xreflabel="Contributor">
-                    <title>Contributor</title>
-                    <para>
+                    <title xml:lang="en">Contributor</title>
+                    <para xml:lang="en">
                         A Contributor contributes to the FreeBSD project either as a
                         developer, as an author, by sending problem reports, or in
                         other ways contributing to the progress of the project. A
@@ -761,8 +759,8 @@
                 </section>
 
                 <section xml:id="role-committer" xreflabel="Committer">
-                    <title>Committer</title>
-                    <para>
+                    <title xml:lang="en">Committer</title>
+                    <para xml:lang="en">
                         A person who has the required privileges to add his code or documentation to the
                         repository.
                         <!--
@@ -776,7 +774,7 @@
                         who has made an average of one commit per month during that time.
                     </para>
 
-                    <para>
+                    <para xml:lang="en">
                         It is worth noting that there are no technical barriers to prevent
                         someone, once having gained commit privileges to the main- or a sub-project, to make commits in
                         parts of that project's source the committer did not specifically get
@@ -799,10 +797,10 @@
                 </section>
 
                 <section xml:id="role-core" xreflabel="Core team">
-                    <title>Core Team</title>
+                    <title xml:lang="en">Core Team</title>
 
 
-                    <para>
+                    <para xml:lang="en">
                         The core team is elected by the committers from the pool of committers
                         and serves as the board of directors of the FreeBSD project. It
                         promotes active contributors to committers, assigns people to
@@ -816,9 +814,9 @@
                 </section>
 
                 <section xml:id="role-maintainer" xreflabel="Maintainership">
-                    <title>Maintainership</title>
+                    <title xml:lang="en">Maintainership</title>
 
-                    <para>
+                    <para xml:lang="en">
                         Maintainership means that that person is responsible for
                         what is allowed to go into that area of the code and has the
                         final say should disagreements over the code occur. This
@@ -826,7 +824,7 @@
                         contributions and reactive work in reviewing commits.
                     </para>
 
-                    <para>
+                    <para xml:lang="en">
                         With the FreeBSD
                         source comes the MAINTAINERS file that contains a one-line
                         summary of how each maintainer would like contributions to be
@@ -836,7 +834,7 @@
                         be unavailable for some time.
                     </para>
 
-                    <para>
+                    <para xml:lang="en">
                         If the maintainer is unavailable for an unreasonably long period
                         of time, and other people do a significant amount of work,
                         maintainership may be switched without the maintainer's approval.
@@ -844,7 +842,7 @@
                         demonstrated, not declared.
                     </para>
 
-                    <para>
+                    <para xml:lang="en">
                         Maintainership of a particular piece of code is a hat that
                         is not held as a group.
                     </para>
@@ -856,9 +854,9 @@
             </section>
 
             <section xml:id="official-hats">
-                <title>Official Hats</title>
+                <title xml:lang="en">Official Hats</title>
 
-                <para>
+                <para xml:lang="en">
                     The official hats in the FreeBSD Project are hats that are more
                     or less formalised and mainly administrative roles. They have
                     the authority and responsibility for their area. The following
@@ -868,12 +866,12 @@
 
                 <para>
                     <figure>
-                        <title>Overview of official hats</title>
+                        <title xml:lang="en">Overview of official hats</title>
                         <mediaobject><imageobject><imagedata fileref="hats-overview"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     All boxes consist of groups of committers, except for the
                     dotted boxes where the holders are not necessarily committers. The
                     flattened circles are sub-projects and consist of both
@@ -883,15 +881,15 @@
 
 
                 <section xml:id="role-doc-manager" xreflabel="Documentation                     project architect">
-                    <title>Documentation project manager</title>
-                    <para>
+                    <title xml:lang="en">Documentation project manager</title>
+                    <para xml:lang="en">
                         <xref linkend="sub-project-documentation"/>
                         architect is responsible for
                         defining and following up documentation goals for the
                         committers in the Documentation project.
                     </para>
 
-                    <para>
+                    <para xml:lang="en">
                         Hat held by:
                         The DocEng team <email>doceng@FreeBSD.org</email>.
                         The
@@ -901,42 +899,42 @@
                 </section>
 
                 <section xml:id="role-postmaster" xreflabel="Postmaster">
-                    <title>Postmaster</title>
-                    <para>
+                    <title xml:lang="en">Postmaster</title>
+                    <para xml:lang="en">
                         The Postmaster is responsible for mail being correctly
                         delivered to the committers' email address. He is also
                         responsible for ensuring that the mailing lists work and
                         should take measures against possible disruptions of mail
                         such as having troll-, spam- and virus-filters.
                     </para>
-                    <para>
+                    <para xml:lang="en">
                         Hat currently held by:
                         the Postmaster Team <email>postmaster@FreeBSD.org</email>.
                     </para>
                 </section>
 
                 <section xml:id="role-release-coordination" xreflabel="Release Coordination">
-                    <title>Release Coordination</title>
+                    <title xml:lang="en">Release Coordination</title>
 
-                    <para>
+                    <para xml:lang="en">
                         The responsibilities of the Release Engineering Team are
                         <itemizedlist>
-                            <listitem><para>
+                            <listitem><para xml:lang="en">
                                     Setting, publishing and following a release schedule for
                                     official releases
                             </para></listitem>
-                            <listitem><para>
+                            <listitem><para xml:lang="en">
                                     Documenting and formalising release engineering procedures
                             </para></listitem>
-                            <listitem><para>
+                            <listitem><para xml:lang="en">
                                     Creation and maintenance of code branches
                             </para></listitem>
-                            <listitem><para>
+                            <listitem><para xml:lang="en">
                                     Coordinating with the Ports and Documentation teams
                                     to have an updated set of packages and documentation
                                     released with the new releases
                             </para></listitem>
-                            <listitem><para>
+                            <listitem><para xml:lang="en">
                                     Coordinating with the Security team so that pending
                                     releases are not affected by recently disclosed vulnerabilities.
                             </para></listitem>
@@ -946,7 +944,7 @@
                         available in the <xref linkend="process-release-engineering"/> section.
                     </para>
 
-                    <para xml:id="role-releng" xreflabel="Release Engineering Team">
+                    <para xml:id="role-releng" xreflabel="Release Engineering Team" xml:lang="en">
                         Hat held by:
                         the Release Engineering team <email>re@FreeBSD.org</email>.
                         The
@@ -956,37 +954,37 @@
                 </section>
 
                 <section xml:id="role-pr-cr" xreflabel="Public Relations &amp; Corporate Liaison">
-                    <title>Public Relations &amp; Corporate Liaison</title>
-                    <para>
+                    <title xml:lang="en">Public Relations &amp; Corporate Liaison</title>
+                    <para xml:lang="en">
                         The Public Relations &amp; Corporate Liaison's
                         responsibilities are:
                         <itemizedlist>
-                            <listitem><para>
+                            <listitem><para xml:lang="en">
                                     Making press statements when happenings that are
                                     important to the FreeBSD Project happen.
                             </para></listitem>
-                            <listitem><para>
+                            <listitem><para xml:lang="en">
                                     Being the official contact person for corporations that
                                     are working close with the FreeBSD Project.
                             </para></listitem>
-                            <listitem><para>
+                            <listitem><para xml:lang="en">
                                     Take steps to promote FreeBSD within both the Open Source
                                     community and the corporate world.
                             </para></listitem>
-                            <listitem><para>
+                            <listitem><para xml:lang="en">
                                     Handle the <quote>freebsd-advocacy</quote> mailing list.
                             </para></listitem>
                         </itemizedlist>
                     </para>
 
-                    <para>
+                    <para xml:lang="en">
                         This hat is currently not occupied.
                     </para>
                 </section>
 
                 <section xml:id="role-security-officer" xreflabel="Security Officer">
-                    <title>Security Officer</title>
-                    <para>
+                    <title xml:lang="en">Security Officer</title>
+                    <para xml:lang="en">
                         The Security Officer's main responsibility is to
                         coordinate information exchange with others in the
                         security community and in the FreeBSD project.
@@ -995,7 +993,7 @@
                         when security problems are reported and promoting proactive
                         development behavior when it comes to security.
                     </para>
-                    <para>
+                    <para xml:lang="en">
                         Because of the fear that information about
                         vulnerabilities may leak out to people with malicious
                         intent before a patch is available, only the Security
@@ -1009,8 +1007,8 @@
                 </section>
 
                 <section xml:id="role-repo-manager" xreflabel="Source Repository Manager">
-                    <title>Source Repository Manager</title>
-                    <para>
+                    <title xml:lang="en">Source Repository Manager</title>
+                    <para xml:lang="en">
                         The Source Repository Manager is the only one who is allowed
                         to directly modify the repository without using the
                         <xref linkend="tool-svn"/> tool.
@@ -1020,15 +1018,15 @@
                         manager has the authority to back out commits if this is
                         necessary to resolve a SVN technical problem.
                     </para>
-                    <para>
+                    <para xml:lang="en">
                         Hat held by:
 			the Source Repository Manager <email>clusteradm@FreeBSD.org</email>.
                     </para>
                 </section>
 
                 <section xml:id="role-election-manager" xreflabel="Election Manager">
-                    <title>Election Manager</title>
-                    <para>
+                    <title xml:lang="en">Election Manager</title>
+                    <para xml:lang="en">
                         The Election Manager is responsible for the
                         <xref linkend="process-core-election"/> process. The manager
                         is responsible for running and maintaining the election
@@ -1036,14 +1034,14 @@
                         events happen in the election process. Major unforeseen
                         events have to be discussed with the <xref linkend="role-core"/>
                     </para>
-                    <para>
+                    <para xml:lang="en">
                         Hat held only during elections.
                     </para>
                 </section>
 
                 <section xml:id="role-webmaster" xreflabel="Web site Management">
-                    <title>Web site Management</title>
-                    <para>
+                    <title xml:lang="en">Web site Management</title>
+                    <para xml:lang="en">
                         The Web site Management hat is responsible for coordinating
                         the rollout of updated web pages on mirrors around the world,
                         for the overall structure of the primary web site and the
@@ -1053,15 +1051,15 @@
                         maintainer for the <quote>www</quote> tree.
 
                     </para>
-                    <para>
+                    <para xml:lang="en">
                         Hat held by:
                         the FreeBSD Webmasters <email>www@FreeBSD.org</email>.
                     </para>
                 </section>
 
                 <section xml:id="role-ports-manager" xreflabel="Ports Manager">
-                    <title>Ports Manager</title>
-                    <para>
+                    <title xml:lang="en">Ports Manager</title>
+                    <para xml:lang="en">
                         The Ports Manager acts as a liaison between
                         <xref linkend="sub-project-ports"/>
                         and the core project, and
@@ -1069,7 +1067,7 @@
 
                     </para>
 
-                    <para>
+                    <para xml:lang="en">
                         Hat held by:
                         the Ports Management Team <email>portmgr@FreeBSD.org</email>.
                         The
@@ -1079,8 +1077,8 @@
                 </section>
 
                 <section xml:id="role-standards" xreflabel="Standards">
-                    <title>Standards</title>
-                    <para>
+                    <title xml:lang="en">Standards</title>
+                    <para xml:lang="en">
                         The Standards hat is responsible for ensuring that FreeBSD
                         complies with the standards it is committed to <!-- (covered in
                         <xref linkend="standardsguidelines"/>) -->, keeping up to date
@@ -1090,41 +1088,41 @@
                         update and FreeBSD's compliancy.
                     </para>
 
-                    <para>
+                    <para xml:lang="en">
                         Hat currently held by:
                         Garrett Wollman <email>wollman@FreeBSD.org</email>.
                     </para>
                 </section>
 
                 <section xml:id="role-core-secretary" xreflabel="Core Secretary">
-                    <title>Core Secretary</title>
-                    <para>
+                    <title xml:lang="en">Core Secretary</title>
+                    <para xml:lang="en">
                         The Core Secretary's main responsibility is to write drafts to
                         and publish the final Core Reports. The secretary also keeps
                         the core agenda, thus ensuring that no balls are dropped
                         unresolved.
                     </para>
-                    <para>
-                        Hat currently held by: &a.jrm.email;.
+                    <para xml:lang="en">
+                        Hat currently held by: Joseph Mingrone <email>jrm@FreeBSD.org</email>.
                     </para>
                 </section>
 
                 <section xml:id="role-bugmeister" xreflabel="Bugmeister">
-                    <title>Bugmeister</title>
-                    <para>
+                    <title xml:lang="en">Bugmeister</title>
+                    <para xml:lang="en">
                         The Bugmeister is responsible for ensuring that the
                         maintenance database is in working order, that the entries
                         are correctly categorised and that there are no invalid entries.
                     </para>
-                    <para>
+                    <para xml:lang="en">
                         Hat currently held by:
                         the Bugmeister Team <email>bugmeister@FreeBSD.org</email>.
                     </para>
                 </section>
 
                 <section xml:id="role-donations" xreflabel="Donations Liaison Officer">
-                    <title>Donations Liaison Officer</title>
-                    <para>
+                    <title xml:lang="en">Donations Liaison Officer</title>
+                    <para xml:lang="en">
                         The task of
                         the donations liaison officer is to match
                         the developers with needs with people or
@@ -1133,19 +1131,19 @@
                         available
                         <link xlink:href="https://www.freebsd.org/donations/">here</link>
                     </para>
-                    <para>
+                    <para xml:lang="en">
                         Hat held by:
                         the Donations Liaison Office <email>donations@FreeBSD.org</email>.
                     </para>
                 </section>
 
                 <section xml:id="role-admin" xreflabel="Admin">
-                    <title>Admin</title>
-                    <para>
+                    <title xml:lang="en">Admin</title>
+                    <para xml:lang="en">
                         (Also called <quote>FreeBSD Cluster Admin</quote>)
                     </para>
 
-                    <para>
+                    <para xml:lang="en">
                         The admin team consists of the
                         people responsible for administrating the
                         computers that the project relies on for
@@ -1155,7 +1153,7 @@
                         servers.
                     </para>
 
-                    <para>
+                    <para xml:lang="en">
                         Hat held by:
                         the Admin team <email>admin@FreeBSD.org</email>.
                     </para>
@@ -1167,11 +1165,11 @@
             </section>
 
             <section xml:id="proc-depend-hats">
-                <title>Process dependent hats</title>
+                <title xml:lang="en">Process dependent hats</title>
 
                 <section xml:id="role-problem-originator" xreflabel="Report originator">
-                    <title>Report originator</title>
-                    <para>
+                    <title xml:lang="en">Report originator</title>
+                    <para xml:lang="en">
                         The person originally responsible for
                         filing a Problem Report.
                     </para>
@@ -1179,8 +1177,8 @@
 
 
                 <section xml:id="role-bugbuster" xreflabel="Bugbuster">
-                    <title>Bugbuster</title>
-                    <para>
+                    <title xml:lang="en">Bugbuster</title>
+                    <para xml:lang="en">
                         A person who will either find the right
                         person to solve the problem, or close the PR if
                         it is a duplicate or otherwise
@@ -1189,8 +1187,8 @@
                 </section>
 
                 <section xml:id="role-mentor" xreflabel="Mentor">
-                    <title>Mentor</title>
-                    <para>
+                    <title xml:lang="en">Mentor</title>
+                    <para xml:lang="en">
                         A mentor is a committer who takes it upon him/her to
                         introduce a new committer to the project, both in terms of
                         ensuring the new committers setup is valid,
@@ -1201,16 +1199,16 @@
                     </para>
                 </section>
                 <section xml:id="role-vendor" xreflabel="Vendor">
-                    <title>Vendor</title>
-                    <para>
+                    <title xml:lang="en">Vendor</title>
+                    <para xml:lang="en">
                         The person(s) or organisation whom
                         external code comes from and whom patches are sent to.
                     </para>
                 </section>
 
                 <section xml:id="role-reviewer" xreflabel="Reviewer">
-                    <title>Reviewers</title>
-                    <para>
+                    <title xml:lang="en">Reviewers</title>
+                    <para xml:lang="en">
                         People on the mailing list where the request
                         for review is posted.
                     </para>
@@ -1221,9 +1219,9 @@
         </chapter>
 
         <chapter xml:id="model-processes" xreflabel="processes">
-            <title>Processes</title>
+            <title xml:lang="en">Processes</title>
 
-            <para>
+            <para xml:lang="en">
                 The following section will describe the defined project
                 processes. Issues that are not handled by these processes happen
                 on an ad-hoc basis based on what has been customary to do in
@@ -1231,9 +1229,9 @@
             </para>
 
             <section xml:id="proc-addrem-committer">
-                <title>Adding new and removing old committers</title>
+                <title xml:lang="en">Adding new and removing old committers</title>
 
-                <para>
+                <para xml:lang="en">
                     The Core team has the responsibility of giving and removing
                     commit privileges to contributors. This can only be done
                     through a vote on the core mailing list.
@@ -1243,7 +1241,7 @@
                     date not removed such privileges. <!-- ref Bruce <bmah@> -->
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Normally a contributor is recommended to core by a
                     committer. For contributors or outsiders to contact
                     core asking to be a committer is not well thought of
@@ -1251,7 +1249,7 @@
 
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     If the area of particular interest for the developer
                     potentially overlaps with other committers' area of
                     maintainership, the opinion of those maintainers is
@@ -1259,7 +1257,7 @@
                     recommends the developer.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     When a contributor is given committer status, he is
                     assigned a mentor. The committer who recommended the
                     new committer will, in the general case, take it upon
@@ -1267,7 +1265,7 @@
 
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     When a contributor is given his commit bit, a <xref linkend="tool-pgp"/>-signed email is sent
                     from either <xref linkend="role-core-secretary"/>,
                     <xref linkend="role-ports-manager"/> or nik@freebsd.org to both
@@ -1281,12 +1279,12 @@
 
                 <para>
                     <figure>
-                        <title>Process summary: adding a new committer</title>
+                        <title xml:lang="en">Process summary: adding a new committer</title>
                         <mediaobject><imageobject><imagedata fileref="proc-add-committer"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     When a contributor sends a piece of code, the receiving
                     committer may choose to recommend that the contributor is
                     given commit privileges. If he recommends this to core,
@@ -1298,7 +1296,7 @@
                     tradition, this is by adding his name to the committers list.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Recall that a committer is considered to be someone who
                     has committed code during the past 12
                     months. However, it is not until after 18 months of inactivity
@@ -1313,26 +1311,26 @@
 
                 <para>
                     <figure>
-                        <title>Process summary: removing a committer</title>
+                        <title xml:lang="en">Process summary: removing a committer</title>
                         <mediaobject><imageobject><imagedata fileref="proc-rm-committer"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     When Core decides to clean up the committers list, they
                     check who has not made a commit for the past 18 months.
                     Committers who have not done so have their commit
                     bits revoked.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     It is also possible for committers to request that their commit
                     bit be retired if for some reason they are no longer going
                     to be actively committing to the project.  In this case, it can also
                     be restored at a later time by core, should the committer ask.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Roles in this process:
 
                     <orderedlist>
@@ -1363,9 +1361,9 @@
             </section>
 
             <section xml:id="committing">
-                <title>Committing code</title>
+                <title xml:lang="en">Committing code</title>
 
-                <para>
+                <para xml:lang="en">
                     The committing of new or modified code is one of the most
                     frequent processes in the FreeBSD project and will usually
                     happen many times a day. Committing of code can only be done
@@ -1375,7 +1373,7 @@
                     report</link>.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     When code is written by the developer that is non-trivial, he
                     should seek a code review from the community. This
                     is done by sending mail to the relevant list asking for
@@ -1386,7 +1384,7 @@
                     reviewed by the committer and tested the same way.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     When a change is committed to a part of the source that
                     has been contributed from an outside
                     <xref linkend="role-vendor"/>,
@@ -1399,7 +1397,7 @@
                     new release is made.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     After the code has been available for review and no further
                     changes are necessary, the code is committed into the
                     development branch, -CURRENT.
@@ -1414,7 +1412,7 @@
                     critical changes should be merged to security branches.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Delaying the commit to -STABLE and other branches allows for
                     <quote>parallel debugging</quote> where the committed code is
                     tested on a wide range of configurations. This makes changes
@@ -1424,12 +1422,12 @@
 
                 <para>
                     <figure>
-                        <title>Process summary: A committer commits code</title>
+                        <title xml:lang="en">Process summary: A committer commits code</title>
                         <mediaobject><imageobject><imagedata fileref="proc-commit"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     When a committer has written a piece of code and
                     wants to commit it, he first needs to determine if it is
                     trivial enough to go in without prior review or if it should
@@ -1448,19 +1446,19 @@
 
                 <para>
                     <figure>
-                        <title>Process summary: A contributor commits code</title>
+                        <title xml:lang="en">Process summary: A contributor commits code</title>
                         <mediaobject><imageobject><imagedata fileref="proc-contrib"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The difference when a contributor makes a code contribution is
                     that he submits the code through the Bugzilla
                     interface. This report is picked up by the maintainer who
                     reviews the code and commits it.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Hats included in this process are:
                     <orderedlist>
                         <listitem><para>
@@ -1486,26 +1484,26 @@
             </section>
 
             <section xml:id="process-core-election" xreflabel="Core election">
-                <title>Core election</title>
+                <title xml:lang="en">Core election</title>
 
-                <para>
+                <para xml:lang="en">
                     Core elections are held at least every two years.
                     <footnote>
-                        <para>The first Core election was held September 2000</para>
+                        <para xml:lang="en">The first Core election was held September 2000</para>
                     </footnote>
                     Nine core members are elected.  New elections are held if
                     the number of core members drops below seven. New elections can
                     also be held should at least 1/3 of the active committers demand this.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     When an election is to take place, core announces this at
                     least 6 weeks in advance, and appoints an election manager to
                     run the elections.
 
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Only committers can be elected into core. The candidates need
                     to submit their candidacy at least one week before the
                     election starts, but can refine their statements until the
@@ -1515,44 +1513,44 @@
                     must answer a few standard questions submitted by the election manager.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     During elections, the rule that a committer must have
                     committed during the 12 past months is followed strictly.
                     Only these committers are eligible to vote.
 
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     When voting, the committer may vote once in support of up to
                     nine nominees. The voting is done over a period of four weeks
                     with reminders being posted on <quote>developers</quote>
                     mailing list that is available to all committers.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The election results are released one week after the election
                     ends, and the new core team takes office one week after the
                     results have been posted.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Should there be a voting tie, this will be resolved by
                     the new, unambiguously elected core members.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Votes and candidate statements are archived, but the archives
                     are not publicly available.
                 </para>
 
                 <para>
                     <figure>
-                        <title>Process summary: Core elections</title>
+                        <title xml:lang="en">Process summary: Core elections</title>
                         <mediaobject><imageobject><imagedata fileref="proc-elections"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Core announces the election and selects an election
                     manager. He prepares the elections, and when ready,
                     candidates can announce their candidacies through
@@ -1561,7 +1559,7 @@
                     announced and the new core team takes office.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Hats in core elections are:
                     <itemizedlist>
                         <listitem><para>
@@ -1587,9 +1585,9 @@
             </section>
 
             <section xml:id="new-features">
-                <title>Development of new features</title>
+                <title xml:lang="en">Development of new features</title>
 
-                <para>
+                <para xml:lang="en">
                     Within the project there are sub-projects that are working on
                     new features. These projects are generally done by one person
                     <citation><xref linkend="jorgensen2001"/></citation>.
@@ -1601,7 +1599,7 @@
                     to the -STABLE branch, it is merged to the -STABLE branch.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The requirements of the project are given by developer
                     wishes, requests from the community in terms of direct
                     requests by mail, Problem Reports, commercial funding for the development
@@ -1616,7 +1614,7 @@
                     handled by the <xref linkend="tool-bugzilla"/> tool.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Requirements analysis happens in two ways. The requests that
                     come in are discussed on mailing lists, both within the main
                     project and in the sub-project that the request belongs to or is
@@ -1627,7 +1625,7 @@
                     by this phase that is merged into the main project.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     As the requests are prioritised by the individual developers on
                     the basis of doing what they find interesting, necessary or are
                     funded to do, there is no overall strategy or prioritisation of
@@ -1640,7 +1638,7 @@
    					[TODO] TRB is undefined at the moment -->
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The verification phase of the project is two-fold. Before
                     committing code to the current-branch, developers request their
                     code to be reviewed by their peers. This review is for the most
@@ -1655,7 +1653,7 @@
                     project and are usually removed before the code is committed to
                     the current branch.
                     <footnote>
-                        <para>
+                        <para xml:lang="en">
                             More and more tests are however performed when
                             building the system (<quote>make
                             world</quote>). These tests are however a very new
@@ -1670,9 +1668,9 @@
 
 
             <section xml:id="model-maintenance" xreflabel="maintenance">
-                <title>Maintenance</title>
+                <title xml:lang="en">Maintenance</title>
 
-                <para>
+                <para xml:lang="en">
 
                     It is an advantage to the project to for each area of the source
                     have at least one person that knows this area well.
@@ -1686,7 +1684,7 @@
                     wrote and integrated the code, or someone who has ported it from
                     the platform it was written for.
                     <footnote>
-                        <para>
+                        <para xml:lang="en">
                             sendmail and named are examples of code that has been merged
                             from other platforms.
                         </para>
@@ -1699,7 +1697,7 @@
 
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The main bulk of work that is put into the FreeBSD project is
                     maintenance. <citation><xref linkend="jorgensen2001"/></citation>
                     has made a figure
@@ -1708,12 +1706,12 @@
 
                 <para>
                     <figure>
-                        <title>J&oslash;rgenssen's model for change integration</title>
+                        <title xml:lang="en">Jørgenssen's model for change integration</title>
                         <mediaobject><imageobject><imagedata fileref="maintenance"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
 
                     Here <quote>development release</quote> refers to the -CURRENT
                     branch while <quote>production release</quote> refers to the
@@ -1726,7 +1724,7 @@
                 </para>
 
 
-                <para>
+                <para xml:lang="en">
                     As of this writing, there were 269 committers in the
                     project. When they commit a change to a branch, that constitutes
                     a new release. It is very common for users in the community to
@@ -1739,7 +1737,7 @@
                     maintenance and ultimately should create a better product.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Before making changes to code in parts of the tree
                     that has a history unknown to the committer, the
                     committer is required to read the commit logs to see why
@@ -1752,10 +1750,10 @@
             </section>
 
             <section xml:id="model-pr">
-                <title>Problem reporting</title>
+                <title xml:lang="en">Problem reporting</title>
 
-                <para>
-                    Before &os;&nbsp;10, &os; included a problem reporting tool called
+                <para xml:lang="en">
+                    Before FreeBSD 10, FreeBSD included a problem reporting tool called
                     <command>send-pr</command>.  Problems include bug reports,
                     feature requests, feature enhancements and notices of new versions
                     of external software that are included in the project.
@@ -1764,7 +1762,7 @@
                     problem report form</link>.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Problem reports are sent to an email address where it
                     is inserted into the Problem Reports maintenance database. A
                     <xref linkend="role-bugbuster"/>
@@ -1788,12 +1786,12 @@
 
                 <para>
                     <figure>
-                        <title>Process summary: problem reporting</title>
+                        <title xml:lang="en">Process summary: problem reporting</title>
                         <mediaobject><imageobject><imagedata fileref="proc-pr"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     A problem is reported by the report originator. It is
                     then classified by a bugbuster and handed to the correct
                     maintainer. He verifies the problem and discusses the
@@ -1803,7 +1801,7 @@
                 </para>
 
 
-                <para>
+                <para xml:lang="en">
                     The roles included in this process are:
                     <orderedlist>
                         <listitem><para>
@@ -1818,7 +1816,7 @@
                     </orderedlist>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     <citation><xref linkend="freebsd-handle-pr"/></citation>.
                     <citation><xref linkend="freebsd-send-pr"/></citation>
                 </para>
@@ -1826,9 +1824,9 @@
             </section>
 
             <section xml:id="process-reactions" xreflabel="Reacting to misbehavior">
-                <title>Reacting to misbehavior</title>
+                <title xml:lang="en">Reacting to misbehavior</title>
 
-                <para>
+                <para xml:lang="en">
                     <citation><xref linkend="freebsd-committer"/></citation> has a
                     number of rules that committers should follow. However, it
                     happens that these rules are broken. The following rules exist
@@ -1837,17 +1835,17 @@
                     commit privileges.
 
                     <itemizedlist>
-                        <listitem><para>
+                        <listitem><para xml:lang="en">
                                 Committing during code freezes without the approval of the
                                 Release Engineering team - 2 days
                         </para></listitem>
-                        <listitem><para>
+                        <listitem><para xml:lang="en">
                                 Committing to a security branch without approval - 2 days
                         </para></listitem>
-                        <listitem><para>
+                        <listitem><para xml:lang="en">
                                 Commit wars - 5 days to all participating parties
                         </para></listitem>
-                        <listitem><para>
+                        <listitem><para xml:lang="en">
                                 Impolite or inappropriate behavior - 5 days
                         </para></listitem>
                     </itemizedlist>
@@ -1855,7 +1853,7 @@
                     <citation><xref linkend="ref-freebsd-trenches"/></citation>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     For the suspensions to be efficient, any single core member can
                     implement a suspension before discussing it on the <quote>core</quote>
                     mailing list. Repeat offenders can, with a 2/3 vote by core,
@@ -1867,12 +1865,12 @@
                     mailing list, a list available to committers only.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     It is important that you cannot be suspended for making
                     technical errors. All penalties come from breaking social etiquette.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Hats involved in this process:
                     <itemizedlist>
                         <listitem><para>
@@ -1887,9 +1885,9 @@
 
 
             <section xml:id="process-release-engineering" xreflabel="release engineering">
-                <title>Release engineering</title>
+                <title xml:lang="en">Release engineering</title>
 
-                <para>
+                <para xml:lang="en">
                     The FreeBSD project has a Release Engineering <!-- ("RE") --> team with a
                     principal release engineer that is responsible for creating releases
                     of FreeBSD that can be brought out to the user community via the
@@ -1904,7 +1902,7 @@
                     meant.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     When a release is coming, the FreeBSD project changes shape
                     somewhat. A release schedule is made containing feature- and
                     code-freezes, release of interim releases and the final
@@ -1919,20 +1917,20 @@
                     are not suitable to be included in the release.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     There are three different kinds of releases:
                     <orderedlist>
-                        <listitem><para>
+                        <listitem><para xml:lang="en">
                                 .0 releases are the first release of a major
                                 version. These are branched of the -CURRENT branch
                                 and have a significantly longer release engineering
                                 cycle due to the unstable nature of the -CURRENT branch
                         </para></listitem>
-                        <listitem><para>
+                        <listitem><para xml:lang="en">
                                 .X releases are releases of the -STABLE
                                 branch. They are scheduled to come out every 4 months.
                         </para></listitem>
-                        <listitem><para>
+                        <listitem><para xml:lang="en">
                                 .X.Y releases are security releases that follow
                                 the .X branch. These come out only when sufficient
                                 security fixes have been merged since the last
@@ -1945,7 +1943,7 @@
 
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     For releases of the -STABLE-branch, the release process starts 45
                     days before the anticipated
                     release date. During the first phase, the first 15 days, the
@@ -1969,7 +1967,7 @@
                     subject to change before the PGP-signed message is sent.
 
                     <footnote>
-                        <para>
+                        <para xml:lang="en">
                             Many commercial vendors use these images to create
                             CD-ROMs that are sold in retail outlets.
                         </para>
@@ -1978,7 +1976,7 @@
 
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The releases of the -CURRENT-branch (that is, all releases that
                     end with <quote>.0</quote>) are very similar, but with twice as
                     long timeframe. It starts 8 weeks prior to the release with
@@ -1996,7 +1994,7 @@
 
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     .0 releases go into their own branch and are aimed
                     mainly at early adopters. The branch then goes through a period
                     of stabilisation, and it is not until the <xref linkend="role-releng"/>
@@ -2006,7 +2004,7 @@
                     this is not a demand.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Most releases are made when a given date that has been deemed a
                     long enough time since the previous release comes. A target is
                     set for having major releases every 18 months and minor
@@ -2025,12 +2023,12 @@
 
                 <para>
                     <figure>
-                        <title>Process summary: release engineering</title>
+                        <title xml:lang="en">Process summary: release engineering</title>
                         <mediaobject><imageobject><imagedata fileref="proc-releng"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     These are the stages in the release engineering
                     process. Multiple release candidates may be created until
                     the release is deemed stable enough to be released.
@@ -2050,17 +2048,17 @@
 
 
         <chapter xml:id="tools">
-            <title>Tools</title>
+            <title xml:lang="en">Tools</title>
 
-            <para>
+            <para xml:lang="en">
                 The major support tools for supporting the development process are
                 Bugzilla, Mailman, and OpenSSH.  These are externally
                 developed tools and are commonly used in the open source world.
             </para>
 
             <section xml:id="tool-svn" xreflabel="SVN">
-                <title>Subversion (SVN)</title>
-                <para>Subversion (<quote>SVN</quote>)
+                <title xml:lang="en">Subversion (SVN)</title>
+                <para xml:lang="en">Subversion (<quote>SVN</quote>)
                     is a system to handle multiple versions of text files and
                     tracking who committed what changes and why. A project lives
                     within a <quote>repository</quote> and different versions are
@@ -2069,8 +2067,8 @@
             </section>
 
             <section xml:id="tool-bugzilla" xreflabel="Bugzilla">
-                <title>Bugzilla</title>
-                <para>
+                <title xml:lang="en">Bugzilla</title>
+                <para xml:lang="en">
                     Bugzilla is a maintenance database consisting of a set of tools to track bugs at a
                     central site. It supports the bug tracking process for sending
                     and handling bugs as well as querying and updating the database
@@ -2083,8 +2081,8 @@
             </section>
 
             <section xml:id="model-mailman" xreflabel="[model, Mailman]">
-                <title>Mailman</title>
-                <para>
+                <title xml:lang="en">Mailman</title>
+                <para xml:lang="en">
                     Mailman is a program that automates the
                     management of mailing lists. The FreeBSD Project uses it to run
                     16 general lists, 60 technical lists, 4 limited lists and 5 lists
@@ -2102,8 +2100,8 @@
             </section>
 
             <section xml:id="tool-pgp" xreflabel="PGP">
-                <title>Pretty Good Privacy</title>
-                <para>
+                <title xml:lang="en">Pretty Good Privacy</title>
+                <para xml:lang="en">
                     Pretty Good Privacy, better known as PGP, is a cryptosystem
                     using a public key architecture to allow people to digitally
                     sign and/or encrypt information in order to ensure secure
@@ -2117,8 +2115,8 @@
             </section>
 
             <section xml:id="tool-ssh2" xreflabel="SSH 2">
-                <title>Secure Shell</title>
-                <para>
+                <title xml:lang="en">Secure Shell</title>
+                <para xml:lang="en">
                     Secure Shell is a standard for securely logging into a remote system
                     and for executing commands on the remote system. It allows
                     other connections, called tunnels, to be established and
@@ -2134,9 +2132,9 @@
         </chapter>
 
         <chapter xml:id="sub-projects">
-            <title>Sub-projects</title>
+            <title xml:lang="en">Sub-projects</title>
 
-            <para>
+            <para xml:lang="en">
                 Sub-projects are formed to reduce the amount of communication
                 needed to coordinate the group of developers. When a problem
                 area is sufficiently isolated, most communication would be
@@ -2147,9 +2145,9 @@
             </para>
 
             <section xml:id="sub-project-ports" xreflabel="The Ports Subproject">
-                <title>The Ports Subproject</title>
+                <title xml:lang="en">The Ports Subproject</title>
 
-                <para>
+                <para xml:lang="en">
                     A <quote>port</quote> is a set of meta-data and patches that
                     are needed to fetch, compile and install correctly an external piece of
                     software on a FreeBSD system. The amount of ports have grown
@@ -2158,12 +2156,12 @@
 
                 <para>
                     <figure xml:id="fig-ports">
-                        <title>Number of ports added between 1996 and 2005</title>
+                        <title xml:lang="en">Number of ports added between 1996 and 2005</title>
                         <mediaobject><imageobject><imagedata fileref="portsstatus"/></imageobject></mediaobject>
                     </figure>
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     <xref linkend="fig-ports"/> is taken from
                     <link xlink:href="https://www.freebsd.org/ports/growth/status.png">
                     the FreeBSD web site</link>. It shows the number of ports
@@ -2172,7 +2170,7 @@
                     since the middle of 2001 grown linearly.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     As the external software described by the port often is under
                     continued development, the amount of work required to maintain
                     the ports is already large, and increasing. This has led to
@@ -2181,7 +2179,7 @@
                     FreeBSD project.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Ports has its own core team with the
                     <xref linkend="role-ports-manager"/> as its leader, and this
                     team can appoint committers without FreeBSD Core's
@@ -2190,7 +2188,7 @@
                     contains many active maintainers that are not committers.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Unlike the main project, the ports tree is not branched. Every
                     release of FreeBSD follows the current ports collection and has thus
                     available updated information on where to find programs and
@@ -2199,7 +2197,7 @@
                     depending on what version of FreeBSD it runs on.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     With an unbranched ports repository
                     it is not possible to guarantee that any port
                     will run on anything other than -CURRENT and -STABLE, in
@@ -2207,7 +2205,7 @@
                     nor volunteer time needed to guarantee this.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     For efficiency of communication, teams depending on Ports,
                     such as the release engineering team, have their own ports liaisons.
                 </para>
@@ -2217,9 +2215,9 @@
 
 
             <section xml:id="sub-project-documentation" xreflabel="The FreeBSD                 Documentation Project">
-                <title>The FreeBSD Documentation Project</title>
+                <title xml:lang="en">The FreeBSD Documentation Project</title>
 
-                <para>
+                <para xml:lang="en">
 		<!-- [TODO] - Recount, according to the statistics there were only
 		              9 mainly Doc-committers in 2004. Get mailinglist data  -->
                     The FreeBSD Documentation project was started January 1995. From
@@ -2229,33 +2227,33 @@
                     indicating that there is quite a large community around it.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The goal of the Documentation project is to provide good and
                     useful documentation of the FreeBSD project, thus making it
                     easier for new users to get familiar with the system and
                     detailing advanced features for the users.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The main tasks in the Documentation project are to work on
                     current projects in the <quote>FreeBSD Documentation Set</quote>,
                     and translate the documentation to other languages.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Like the FreeBSD Project, documentation is split in the same
                     branches. This is done so that there is always an updated
                     version of the documentation for each version. Only
                     documentation errors are corrected in the security branches.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     Like the ports sub-project, the Documentation project can
                     appoint documentation committers without FreeBSD Core's approval.
                     <citation><xref linkend="freebsd-doceng-charter"/></citation>.
                 </para>
 
-                <para>
+                <para xml:lang="en">
                     The Documentation project has a primer. This is used both to
                     introduce new project members to the standard tools and
                     syntaxes and acts as a reference when working on the project.
@@ -2267,230 +2265,230 @@
     </chapter>
 
 <bibliography xml:id="bibliography">
-        <title>References</title>
+        <title xml:lang="en">References</title>
 
   <biblioentry xml:id="brooks" xreflabel="Brooks, 1995">
     <authorgroup>
-      <author><personname><firstname>Frederick P.</firstname><surname>Brooks</surname></personname></author>
+      <author xml:lang="en"><personname><firstname>Frederick P.</firstname><surname>Brooks</surname></personname></author>
     </authorgroup>
-    <copyright><year>1975</year><year>1995</year>
+    <copyright xml:lang="en"><year>1975</year><year>1995</year>
       <holder>Pearson Education Limited</holder>
     </copyright>
-    <biblioid class="isbn">0201835959</biblioid>
+    <biblioid class="isbn" xml:lang="en">0201835959</biblioid>
     <publisher>
-      <publishername>Addison-Wesley Pub Co</publishername>
+      <publishername xml:lang="en">Addison-Wesley Pub Co</publishername>
     </publisher>
-    <citetitle>The Mythical Man-Month</citetitle>
-    <subtitle>Essays on Software Engineering, Anniversary Edition (2nd Edition)</subtitle>
+    <citetitle xml:lang="en">The Mythical Man-Month</citetitle>
+    <subtitle xml:lang="en">Essays on Software Engineering, Anniversary Edition (2nd Edition)</subtitle>
   </biblioentry>
 
         <biblioentry xml:id="thesis" xreflabel="Saers, 2003">
             <authorgroup>
-                <author><personname><firstname>Niklas</firstname><surname>Saers</surname></personname></author>
+                <author xml:lang="en"><personname><firstname>Niklas</firstname><surname>Saers</surname></personname></author>
             </authorgroup>
-            <copyright>
+            <copyright xml:lang="en">
                 <year>2003</year>
             </copyright>
-            <citetitle>A project model for the FreeBSD Project</citetitle>
-            <subtitle>Candidatus Scientiarum thesis</subtitle>
-            <bibliomisc xlink:href="http://niklas.saers.com/thesis">http://niklas.saers.com/thesis</bibliomisc>
+            <citetitle xml:lang="en">A project model for the FreeBSD Project</citetitle>
+            <subtitle xml:lang="en">Candidatus Scientiarum thesis</subtitle>
+            <bibliomisc xlink:href="http://niklas.saers.com/thesis" xml:lang="en">http://niklas.saers.com/thesis</bibliomisc>
         </biblioentry>
 
 
-        <biblioentry xml:id="jorgensen2001" xreflabel="J&oslash;rgensen, 2001">
+        <biblioentry xml:id="jorgensen2001" xreflabel="Jørgensen, 2001">
             <authorgroup>
-                <author><personname><firstname>Niels</firstname><surname>J&oslash;rgensen</surname></personname></author>
+                <author xml:lang="en"><personname><firstname>Niels</firstname><surname>Jørgensen</surname></personname></author>
             </authorgroup>
-            <copyright>
+            <copyright xml:lang="en">
                 <year>2001</year>
             </copyright>
-            <citetitle>Putting it All in the Trunk</citetitle>
-            <subtitle>Incremental Software Development in the FreeBSD Open Source Project</subtitle>
-            <bibliomisc xlink:href="http://www.dat.ruc.dk/~nielsj/research/papers/freebsd.pdf">http://www.dat.ruc.dk/~nielsj/research/papers/freebsd.pdf</bibliomisc>
+            <citetitle xml:lang="en">Putting it All in the Trunk</citetitle>
+            <subtitle xml:lang="en">Incremental Software Development in the FreeBSD Open Source Project</subtitle>
+            <bibliomisc xlink:href="http://www.dat.ruc.dk/~nielsj/research/papers/freebsd.pdf" xml:lang="en">http://www.dat.ruc.dk/~nielsj/research/papers/freebsd.pdf</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="ref-pmbok" xreflabel="PMI, 2000">
             <authorgroup>
-                <author><personname><surname>Project Management Institute</surname></personname></author>
+                <author xml:lang="en"><personname><surname>Project Management Institute</surname></personname></author>
             </authorgroup>
-            <copyright><year>1996</year><year>2000</year>
+            <copyright xml:lang="en"><year>1996</year><year>2000</year>
                 <holder>Project Management Institute</holder>
             </copyright>
-            <biblioid class="isbn">1-880410-23-0</biblioid>
+            <biblioid class="isbn" xml:lang="en">1-880410-23-0</biblioid>
             <publisher>
-                <publishername>Project Management Institute</publishername>
-                <address>
+                <publishername xml:lang="en">Project Management Institute</publishername>
+                <address xml:lang="en">
                     <street>Newtown Square</street>
                     <city>Pennsylvania</city>
                     <country>USA</country>
                 </address>
             </publisher>
-            <citetitle>PMBOK Guide</citetitle>
-            <subtitle>A Guide to the Project Management Body of Knowledge,
+            <citetitle xml:lang="en">PMBOK Guide</citetitle>
+            <subtitle xml:lang="en">A Guide to the Project Management Body of Knowledge,
             2000 Edition</subtitle>
         </biblioentry>
 
 
 
         <biblioentry xml:id="freebsd-bylaws" xreflabel="FreeBSD, 2000A">
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Project</holder>
             </copyright>
-            <citetitle>Core Bylaws</citetitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/internal/bylaws.html">https://www.freebsd.org/internal/bylaws.html</bibliomisc>
+            <citetitle xml:lang="en">Core Bylaws</citetitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/internal/bylaws.html" xml:lang="en">https://www.freebsd.org/internal/bylaws.html</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="freebsd-developer-handbook" xreflabel="FreeBSD, 2002A">
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Documentation Project</holder>
             </copyright>
-            <citetitle>FreeBSD Developer's Handbook</citetitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/doc/en_US.ISO8859-1/books/developers-handbook/">https://www.freebsd.org/doc/en_US.ISO8859-1/books/developers-handbook/</bibliomisc>
+            <citetitle xml:lang="en">FreeBSD Developer's Handbook</citetitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/doc/en_US.ISO8859-1/books/developers-handbook/" xml:lang="en">https://www.freebsd.org/doc/en_US.ISO8859-1/books/developers-handbook/</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="bsd-election2002" xreflabel="FreeBSD, 2002B">
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Project</holder>
             </copyright>
-            <citetitle>Core team election 2002</citetitle>
-            <bibliomisc xlink:href="http://election.uk.freebsd.org/candidates.html">http://election.uk.freebsd.org/candidates.html</bibliomisc>
+            <citetitle xml:lang="en">Core team election 2002</citetitle>
+            <bibliomisc xlink:href="http://election.uk.freebsd.org/candidates.html" xml:lang="en">http://election.uk.freebsd.org/candidates.html</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="freebsd-handle-pr" xreflabel="FreeBSD, 2002C">
             <authorgroup>
-                <author><personname><firstname>Dag-Erling</firstname><surname>Sm&oslash;rgrav</surname></personname></author>
-                <author><personname><firstname>Hiten</firstname><surname>Pandya</surname></personname></author>
+                <author xml:lang="en"><personname><firstname>Dag-Erling</firstname><surname>Smørgrav</surname></personname></author>
+                <author xml:lang="en"><personname><firstname>Hiten</firstname><surname>Pandya</surname></personname></author>
             </authorgroup>
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Documentation Project</holder>
             </copyright>
             <publisher>
-                <publishername>The FreeBSD Documentation Project</publishername>
+                <publishername xml:lang="en">The FreeBSD Documentation Project</publishername>
             </publisher>
-            <citetitle>Problem Report Handling Guidelines</citetitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/doc/en/articles/pr-guidelines/article.html">https://www.freebsd.org/doc/en/articles/pr-guidelines/article.html</bibliomisc>
+            <citetitle xml:lang="en">Problem Report Handling Guidelines</citetitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/doc/en/articles/pr-guidelines/article.html" xml:lang="en">https://www.freebsd.org/doc/en/articles/pr-guidelines/article.html</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="freebsd-send-pr" xreflabel="FreeBSD, 2002D">
             <authorgroup>
-                <author><personname><firstname>Dag-Erling</firstname><surname>Sm&oslash;rgrav</surname></personname></author>
+                <author xml:lang="en"><personname><firstname>Dag-Erling</firstname><surname>Smørgrav</surname></personname></author>
             </authorgroup>
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Documentation Project</holder>
             </copyright>
             <publisher>
-                <publishername>The FreeBSD Documentation Project</publishername>
+                <publishername xml:lang="en">The FreeBSD Documentation Project</publishername>
             </publisher>
-            <citetitle>Writing FreeBSD Problem Reports</citetitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/doc/en/articles/problem-reports/article.html">https://www.freebsd.org/doc/en/articles/problem-reports/article.html</bibliomisc>
+            <citetitle xml:lang="en">Writing FreeBSD Problem Reports</citetitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/doc/en/articles/problem-reports/article.html" xml:lang="en">https://www.freebsd.org/doc/en/articles/problem-reports/article.html</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="freebsd-committer" xreflabel="FreeBSD, 2001">
-            <copyright><year>2001</year>
+            <copyright xml:lang="en"><year>2001</year>
                 <holder>The FreeBSD Documentation Project</holder>
             </copyright>
             <publisher>
-                <publishername>The FreeBSD Documentation Project</publishername>
+                <publishername xml:lang="en">The FreeBSD Documentation Project</publishername>
             </publisher>
             <!-- Version 1.146 -->
-            <citetitle>Committers Guide</citetitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/doc/en/articles/committers-guide/article.html">https://www.freebsd.org/doc/en/articles/committers-guide/article.html</bibliomisc>
+            <citetitle xml:lang="en">Committers Guide</citetitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/doc/en/articles/committers-guide/article.html" xml:lang="en">https://www.freebsd.org/doc/en/articles/committers-guide/article.html</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="freebsd-releng" xreflabel="FreeBSD, 2002E">
             <authorgroup>
-                <author><personname><firstname>Murray</firstname><surname>Stokely</surname></personname></author>
+                <author xml:lang="en"><personname><firstname>Murray</firstname><surname>Stokely</surname></personname></author>
             </authorgroup>
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Documentation Project</holder>
             </copyright>
             <!-- Version 1.42 -->
             <publisher>
-                <publishername>The FreeBSD Documentation Project</publishername>
+                <publishername xml:lang="en">The FreeBSD Documentation Project</publishername>
             </publisher>
-            <citetitle>FreeBSD Release Engineering</citetitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/doc/en_US.ISO8859-1/articles/releng/article.html">https://www.freebsd.org/doc/en_US.ISO8859-1/articles/releng/article.html</bibliomisc>
+            <citetitle xml:lang="en">FreeBSD Release Engineering</citetitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/doc/en_US.ISO8859-1/articles/releng/article.html" xml:lang="en">https://www.freebsd.org/doc/en_US.ISO8859-1/articles/releng/article.html</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="ref-bsd-handbook" xreflabel="FreeBSD, 2003A">
             <authorgroup>
-                <author><personname><surname>The FreeBSD Documentation Project</surname></personname></author>
+                <author xml:lang="en"><personname><surname>The FreeBSD Documentation Project</surname></personname></author>
             </authorgroup>
-            <citetitle>FreeBSD Handbook</citetitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook">https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook</bibliomisc>
+            <citetitle xml:lang="en">FreeBSD Handbook</citetitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook" xml:lang="en">https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="freebsd-contributors" xreflabel="FreeBSD, 2002F">
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Documentation Project</holder>
             </copyright>
             <publisher>
-                <publishername>The FreeBSD Documentation Project</publishername>
+                <publishername xml:lang="en">The FreeBSD Documentation Project</publishername>
             </publisher>
-            <citetitle>Contributors to FreeBSD</citetitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/article.html">https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/article.html</bibliomisc>
+            <citetitle xml:lang="en">Contributors to FreeBSD</citetitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/article.html" xml:lang="en">https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/article.html</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="freebsd-election" xreflabel="FreeBSD, 2002G">
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Project</holder>
             </copyright>
             <publisher>
-                <publishername>The FreeBSD Project</publishername>
+                <publishername xml:lang="en">The FreeBSD Project</publishername>
             </publisher>
-            <citetitle>Core team elections 2002</citetitle>
-            <bibliomisc xlink:href="http://election.uk.freebsd.org">http://election.uk.freebsd.org</bibliomisc>
+            <citetitle xml:lang="en">Core team elections 2002</citetitle>
+            <bibliomisc xlink:href="http://election.uk.freebsd.org" xml:lang="en">http://election.uk.freebsd.org</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="freebsd-expiration-policy" xreflabel="FreeBSD, 2002H">
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Project</holder>
             </copyright>
             <publisher>
-                <publishername>The FreeBSD Project</publishername>
+                <publishername xml:lang="en">The FreeBSD Project</publishername>
             </publisher>
-            <citetitle>Commit Bit Expiration Policy</citetitle>
-            <subtitle>2002/04/06 15:35:30</subtitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/internal/expire-bits.html">https://www.freebsd.org/internal/expire-bits.html</bibliomisc>
+            <citetitle xml:lang="en">Commit Bit Expiration Policy</citetitle>
+            <subtitle xml:lang="en">2002/04/06 15:35:30</subtitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/internal/expire-bits.html" xml:lang="en">https://www.freebsd.org/internal/expire-bits.html</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="freebsd-new-account" xreflabel="FreeBSD, 2002I">
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Project</holder>
             </copyright>
             <publisher>
-                <publishername>The FreeBSD Project</publishername>
+                <publishername xml:lang="en">The FreeBSD Project</publishername>
             </publisher>
-            <citetitle>New Account Creation Procedure</citetitle>
-            <subtitle>2002/08/19 17:11:27</subtitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/internal/new-account.html">https://www.freebsd.org/internal/new-account.html</bibliomisc>
+            <citetitle xml:lang="en">New Account Creation Procedure</citetitle>
+            <subtitle xml:lang="en">2002/08/19 17:11:27</subtitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/internal/new-account.html" xml:lang="en">https://www.freebsd.org/internal/new-account.html</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="freebsd-doceng-charter" xreflabel="FreeBSD, 2003B">
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>The FreeBSD Documentation Project</holder>
             </copyright>
             <publisher>
-                <publishername>The FreeBSD Documentation Project</publishername>
+                <publishername xml:lang="en">The FreeBSD Documentation Project</publishername>
             </publisher>
-            <citetitle>FreeBSD DocEng Team Charter</citetitle>
-            <subtitle>2003/03/16 12:17</subtitle>
-            <bibliomisc xlink:href="https://www.freebsd.org/internal/doceng.html">https://www.freebsd.org/internal/doceng.html</bibliomisc>
+            <citetitle xml:lang="en">FreeBSD DocEng Team Charter</citetitle>
+            <subtitle xml:lang="en">2003/03/16 12:17</subtitle>
+            <bibliomisc xlink:href="https://www.freebsd.org/internal/doceng.html" xml:lang="en">https://www.freebsd.org/internal/doceng.html</bibliomisc>
         </biblioentry>
 
         <biblioentry xml:id="ref-freebsd-trenches" xreflabel="Lehey, 2002">
             <authorgroup>
-                <author><personname><firstname>Greg</firstname><surname>Lehey</surname></personname></author>
+                <author xml:lang="en"><personname><firstname>Greg</firstname><surname>Lehey</surname></personname></author>
             </authorgroup>
-            <copyright><year>2002</year>
+            <copyright xml:lang="en"><year>2002</year>
                 <holder>Greg Lehey</holder>
             </copyright>
             <publisher>
-                <publishername>Greg Lehey</publishername>
+                <publishername xml:lang="en">Greg Lehey</publishername>
             </publisher>
-            <citetitle>Two years in the trenches</citetitle>
-            <subtitle>The evolution of a software project</subtitle>
-            <bibliomisc xlink:href="http://www.lemis.com/grog/In-the-trenches.pdf">http://www.lemis.com/grog/In-the-trenches.pdf</bibliomisc>
+            <citetitle xml:lang="en">Two years in the trenches</citetitle>
+            <subtitle xml:lang="en">The evolution of a software project</subtitle>
+            <bibliomisc xlink:href="http://www.lemis.com/grog/In-the-trenches.pdf" xml:lang="en">http://www.lemis.com/grog/In-the-trenches.pdf</bibliomisc>
         </biblioentry>
     </bibliography>
 
