@@ -12,14 +12,6 @@ INSTALL_COMPRESSED?=gz
 INSTALL_ONLY_COMPRESSED?=
 
 SRCS=	article.xml
-SRCS+=	contrib.ent
-SRCS+=	contrib.386bsd.xml
-SRCS+=	contrib.additional.xml
-SRCS+=	contrib.committers.xml
-SRCS+=	contrib.corealumni.xml
-SRCS+=	contrib.develalumni.xml
-SRCS+=	contrib.develinmemoriam.xml
-SRCS+=	contrib.portmgralumni.xml
 
 URL_RELPREFIX?=	../../../..
 DOC_PREFIX?=	${.CURDIR}/../../..
