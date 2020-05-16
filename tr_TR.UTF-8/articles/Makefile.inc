@@ -2,4 +2,4 @@
 # $FreeBSD$
 #
 
-DESTDIR?=	${DOCDIR}/nb_NO.UTF-8/articles/${.CURDIR:T}
+DESTDIR?=	${DOCDIR}/tr_TR.UTF-8/articles/${.CURDIR:T}
