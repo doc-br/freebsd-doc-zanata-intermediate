@@ -1,6 +1,8 @@
 # $FreeBSD$
 
-SUBDIR= handbook
+SUBDIR =
+SUBDIR+= developers-handbook
+SUBDIR+= handbook
 
 ROOT_SYMLINKS= handbook
 
