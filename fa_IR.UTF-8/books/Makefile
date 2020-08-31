@@ -1,6 +1,7 @@
 # $FreeBSD$
 
 SUBDIR =
+SUBDIR+= arch-handbook
 SUBDIR+= developers-handbook
 SUBDIR+= handbook
 
